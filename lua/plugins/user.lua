@@ -13,6 +13,7 @@ return {
     event = "BufRead",
     config = function() require("lsp_signature").setup() end,
   },
+  "tpope/vim-fugitive",
 
   -- == Examples of Overriding Plugins ==
 
