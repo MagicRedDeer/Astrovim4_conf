@@ -8,5 +8,7 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.git.neogit" },
+  { import = "astrocommunity.motion.leap-nvim" },
+  { import = "astrocommunity.motion.mini-ai" },
   -- import/override with your plugins folder
 }

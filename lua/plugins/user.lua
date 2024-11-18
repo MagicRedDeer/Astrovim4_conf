@@ -14,6 +14,7 @@ return {
     config = function() require("lsp_signature").setup() end,
   },
   "tpope/vim-fugitive",
+  "tpope/vim-surround",
 
   -- == Examples of Overriding Plugins ==
 
