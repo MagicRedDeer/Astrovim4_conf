@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -21,7 +19,7 @@ return {
     },
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
     diagnostics = {
-      virtual_text = true,
+      virtual_text = false,
       underline = true,
     },
     -- vim options can be configured here
@@ -32,6 +30,10 @@ return {
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
+        shell = (vim.fn.executable "pwsh") and "pwsh" or "sh" or "cmd.exe",
+        shellcmdflag = vim.fn.executable "pwsh" and "-command" or "-c",
+        shellquote = '"',
+        shellxquote = "",
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
